@@ -1,0 +1,107 @@
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: black;
+  font-family: Arial, sans-serif;
+}
+
+.screen {
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+
+.screen.active {
+  display: block;
+}
+
+.full {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/************* PAGE 1 – SELECT VEHICLE ****************/
+
+.car-option {
+  position: absolute;
+  width: 26%;   
+  bottom: 3%;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+#car-porsche {
+  left: 6%; 
+}
+
+#car-gwagon {
+  left: 34%; 
+}
+
+#car-red {
+  left: 62%;
+}
+
+/************* PAGE 2 – PREVIEW + START GAME ****************/
+.chosen-car {
+  position: absolute;
+  bottom: 2%;
+  left: 60%;
+  transform: translateX(-50%);
+  width: 22%; 
+}
+
+.start-button {
+  position: absolute;
+  top: 35%;
+  left: 55%;
+  transform: translateX(-50%);
+  width: 30%;
+  cursor: pointer;
+}
+
+
+/************* PAGE 3 – GAME PAGE ****************/
+
+#gameArea {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.game-bg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.player-car {
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 18%;
+}
+
+/* Life bar in top-left corner */
+.life-bar {
+  position: absolute;
+  width: 30%;
+  top: 3%;
+  left: 3%;
+}
+
+/************* PAGE 4 – YOU WIN ****************/
+
+.play-again-button {
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 30%;
+  cursor: pointer;
+}
