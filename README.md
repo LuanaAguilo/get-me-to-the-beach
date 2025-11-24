@@ -1,2 +1,33 @@
 # Get Me to the Beach
-Get Me to the Beach is an arcade style driving game with Hawaii vibes. Cruise down a sunny coastal road and dodge potholes and fallen palm tree debris, and collect pineapples, surfboards, and beach balls for extra points. Pick up a rare sun coin for extra bonuses. Make it to the beach without losing all your lifeline. 
+
+<p align="center">
+  <img src="./images/game-logo.png" width="500" alt="Get Me To The Beach Cover">
+</p>
+
+A retro, Hawaii-themed arcade driving game where you cruise down a sunny coastal road, dodge potholes and fallen palm tree debris, and collect pineapples, surfboards, beach balls, and rare sun coins for extra points. The goal: make it to the beach without losing all your lifeline.
+
+---
+
+## How to Play
+
+- Choose your vehicle
+- Press Start
+- Use the left and right arrow keys to move
+- Avoid obstacles
+- Collect items for extra points
+- Reach the beach to win
+- Lose all lives and the game ends
+
+---
+
+## Technologies Used
+
+- HTML
+- CSS
+- JavaScript (DOM manipulation)
+
+---
+
+## Credits
+
+Designed and developed by **Luana Aguilo**.

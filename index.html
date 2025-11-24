@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Get Me To The Beach</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- PAGE 0 — START PAGE -->
+    <div id="page0" class="screen active">
+      <img src="images/pg0-start-page.png" class="full" />
+    </div>
+
+    <!-- PAGE 1 — SELECT VEHICLE -->
+    <div id="page1" class="screen">
+      <img src="images/pg1-select-vehicle.png" class="full" />
+
+      <!-- Clickable cars placed on top of the image -->
+      <img src="images/gwagon.png" class="car-option" id="car-gwagon" />
+      <img src="images/porsche.png" class="car-option" id="car-porsche" />
+      <img src="images/red-convertible.png" class="car-option" id="car-red" />
+    </div>
+
+    <!-- PAGE 2 — PREVIEW SELECTED CAR + START GAME -->
+    <div id="page2" class="screen">
+      <img src="images/pg2-start-game.png" class="full" />
+
+      <!-- The car the user selected -->
+      <img id="chosenCar" class="chosen-car" />
+
+      <!-- Clickable start button placed over the hard-coded one -->
+      <img id="startBtn" src="images/start-game.png" class="start-button" />
+    </div>
+
+    <!-- PAGE 3 — GAME PAGE -->
+    <div id="page3" class="screen">
+      <div id="gameArea">
+        <!-- Empty road background -->
+        <img src="images/pg3-game-page.png" class="game-bg" />
+
+        <!-- Car that the user selected -->
+        <img id="playerCar" class="player-car" />
+
+        <!-- Life bar (starts full) -->
+        <img id="lifeBar" class="life-bar" src="images/life-bar-full.png" />
+      </div>
+    </div>
+
+    <!-- PAGE 4 — YOU WIN -->
+    <div id="page4" class="screen">
+      <img src="images/pg4-you-win.png" class="full" />
+
+      <!-- Clickable play again button -->
+      <img
+        id="playAgainBtn"
+        src="images/play-again.png"
+        class="play-again-button"
+      />
+    </div>
+
+    <!-- PAGE 5 — GAME OVER -->
+    <div id="page5" class="screen">
+      <img src="images/pg5-game-over.png" class="full" />
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
