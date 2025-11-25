@@ -13,37 +13,33 @@
       <img src="images/pg0-start-page.png" class="full" />
     </div>
 
-    <!-- PAGE 1 - SELECT VEHICLE -->
+    <!-- PAGE 1 - START GAME -->
     <div id="page1" class="screen">
-      <img src="images/pg1-select-vehicle.png" class="full" />
+      <img src="images/pg1-start-game.png" class="full" />
 
-      <!-- Clickable cars placed on top of the image -->
+      <!-- CLICKABLE START GAME BUTTON -->
+      <img id="startBtn" src="images/start-game.png" class="start-button" />
+    </div>
+
+    <!-- PAGE 2 - SELECT VEHICLE -->
+    <div id="page2" class="screen">
+      <img src="images/pg2-select-vehicle.png" class="full" />
+
+      <!-- 3 CLICKABLE CARS -->
       <img src="images/gwagon.png" class="car-option" id="car-gwagon" />
       <img src="images/porsche.png" class="car-option" id="car-porsche" />
       <img src="images/red-convertible.png" class="car-option" id="car-red" />
     </div>
 
-    <!-- PAGE 2 - PREVIEW SELECTED CAR + START GAME -->
-    <div id="page2" class="screen">
-      <img src="images/pg2-start-game.png" class="full" />
-
-      <!-- The car the user selected -->
-      <img id="chosenCar" class="chosen-car" />
-
-      <!-- Clickable start button placed over the hard-coded one -->
-      <img id="startBtn" src="images/start-game.png" class="start-button" />
-    </div>
-
     <!-- PAGE 3 - GAME PAGE -->
     <div id="page3" class="screen">
       <div id="gameArea">
-        <!-- Empty road background -->
         <img src="images/pg3-game-page.png" class="game-bg" />
 
-        <!-- Car that the user selected -->
+        <!-- player car -->
         <img id="playerCar" class="player-car" />
 
-        <!-- Life bar (starts full) -->
+        <!-- life bar -->
         <img id="lifeBar" class="life-bar" src="images/life-bar-full.png" />
       </div>
     </div>
@@ -52,7 +48,6 @@
     <div id="page4" class="screen">
       <img src="images/pg4-you-win.png" class="full" />
 
-      <!-- Clickable play again button -->
       <img
         id="playAgainBtn"
         src="images/play-again.png"
@@ -64,6 +59,11 @@
     <div id="page5" class="screen">
       <img src="images/pg5-game-over.png" class="full" />
     </div>
+
+    <!-- AUDIO -->
+    <audio id="musicChoose" src="./sounds/choose-vehicle-page.mp3" loop></audio>
+    <audio id="musicGame" src="./sounds/game-sound-track.mp3" loop></audio>
+    <audio id="carClickSfx" src="./sounds/vehicle-clicked-sound.mp3"></audio>
 
     <script src="script.js"></script>
   </body>
