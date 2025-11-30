@@ -1,4 +1,4 @@
-/* RESET LAYOUT BACK TO NORMAL */
+/* --------- GLOBAL RESET + BASE LAYOUT ------------ */
 
 body {
   margin: 0;
@@ -19,16 +19,22 @@ body {
   display: block;
 }
 
-/* ALL PAGES DISPLAY FULL IMAGE */
+/* Background images */
 .full,
 .game-bg {
   width: 100%;
   height: 100%;
-  object-fit: cover;   /* fill screen normally */
-  object-position: center; /* center it normally */
+  object-fit: cover;
+  object-position: center;
 }
 
-/************* PAGE 1 – START GAME ****************/
+/* Page 2 background should not block clicking */
+#page2 .full {
+  pointer-events: none;
+}
+
+/* -------- PAGE 1 START BUTTON -------- */
+
 .start-button {
   position: absolute;
   top: 35%;
@@ -36,30 +42,29 @@ body {
   transform: translateX(-50%);
   width: 30%;
   cursor: pointer;
+  z-index: 10;
 }
 
-/************* PAGE 2 – SELECT VEHICLE ****************/
+/* -------- VEHICLE SELECT PAGE -------- */
+
 .car-option {
   position: absolute;
   width: 23%;
   bottom: 3%;
   cursor: pointer;
-  transition: transform 0.2s;
+  transition: transform 0.2s ease;
+  z-index: 20;
 }
 
-#car-porsche {
-  left: 6%;
+#car-porsche { left: 6%; }
+#car-gwagon  { left: 34%; }
+#car-red     { left: 62%; }
+
+.car-option:hover {
+  transform: scale(1.07);
 }
 
-#car-gwagon {
-  left: 34%;
-}
-
-#car-red {
-  left: 62%;
-}
-
-/************* PAGE 3 – GAME PAGE ****************/
+/* -------- GAME PAGE -------- */
 
 #gameArea {
   width: 100%;
@@ -68,27 +73,85 @@ body {
   overflow: hidden;
 }
 
+/* Player car */
 .player-car {
   position: absolute;
   bottom: 5%;
   left: 50%;
   transform: translateX(-50%);
   width: 18%;
+  z-index: 10;
 }
+
+/* -------- LIFE BAR -------- */
 
 .life-bar {
   position: absolute;
   width: 30%;
   top: 3%;
   left: 3%;
+  z-index: 9999;
+  opacity: 1;
+  display: block;
 }
 
-/************* PAGE 4 – YOU WIN ****************/
-.play-again-button {
+/* -------- SCORE (TOP RIGHT) -------- */
+
+#scoreCounter {
   position: absolute;
-  bottom: 10%;
+  top: 3%;
+  right: 3%;
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+  z-index: 30;
+  text-shadow: 2px 2px 4px black;
+}
+
+/* -------- FALLING OBJECTS -------- */
+
+.falling-object {
+  position: absolute;
+  width: 6%;
+  transform-origin: center center;
+  transform: translateX(-50%) scale(1);
+  pointer-events: none;
+  z-index: 5;
+}
+
+/* Debris bigger */
+.falling-object.debris {
+  width: 20%;
+  z-index: 7;
+}
+
+/* Potholes */
+.falling-object.pothole {
+  width: 16.5%;
+  z-index: 8;
+}
+
+/* -------- YOU WIN PAGE -------- */
+
+.final-score {
+  position: absolute;
+  top: 34%;
   left: 50%;
   transform: translateX(-50%);
-  width: 30%;
+  color: white;
+  font-size: 3rem;
+  font-weight: bold;
+  text-shadow: 3px 3px 6px black;
+  z-index: 50;
+}
+
+/* Play Again button — slightly bigger + slightly higher */
+.play-again-button {
+  position: absolute;
+  top: 56%;      /* was 58% → slightly higher now */
+  left: 10%;
+  transform: translateY(-50%);
+  width: 26%;    /* was 24% → tiny bit bigger */
   cursor: pointer;
+  z-index: 20;
 }
