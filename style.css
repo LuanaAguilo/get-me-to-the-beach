@@ -1,13 +1,13 @@
-/* --------- GLOBAL RESET + BASE LAYOUT ------------ */
-
+/* basic layout */
 body {
   margin: 0;
   padding: 0;
-  overflow: hidden;
   background-color: black;
+  overflow: hidden;
   font-family: Arial, sans-serif;
 }
 
+/* each game page */
 .screen {
   display: none;
   width: 100vw;
@@ -19,22 +19,20 @@ body {
   display: block;
 }
 
-/* Background images */
+/* full background images */
 .full,
 .game-bg {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center;
 }
 
-/* Page 2 background should not block clicking */
+/* page 2 background should not block car clicking */
 #page2 .full {
   pointer-events: none;
 }
 
-/* -------- PAGE 1 START BUTTON -------- */
-
+/* start button (page 1) */
 .start-button {
   position: absolute;
   top: 35%;
@@ -45,8 +43,7 @@ body {
   z-index: 10;
 }
 
-/* -------- VEHICLE SELECT PAGE -------- */
-
+/* car select images */
 .car-option {
   position: absolute;
   width: 23%;
@@ -64,8 +61,7 @@ body {
   transform: scale(1.07);
 }
 
-/* -------- GAME PAGE -------- */
-
+/* game area */
 #gameArea {
   width: 100%;
   height: 100%;
@@ -73,30 +69,27 @@ body {
   overflow: hidden;
 }
 
-/* Player car */
+/* player car */
 .player-car {
   position: absolute;
   bottom: 5%;
   left: 50%;
+  width: 17%;
   transform: translateX(-50%);
-  width: 18%;
   z-index: 10;
 }
 
-/* -------- LIFE BAR -------- */
-
+/* life bar (top left) */
 .life-bar {
   position: absolute;
   width: 30%;
   top: 3%;
   left: 3%;
-  z-index: 9999;
-  opacity: 1;
+  z-index: 999;
   display: block;
 }
 
-/* -------- SCORE (TOP RIGHT) -------- */
-
+/* score (top right) */
 #scoreCounter {
   position: absolute;
   top: 3%;
@@ -104,35 +97,34 @@ body {
   color: white;
   font-size: 2rem;
   font-weight: bold;
-  z-index: 30;
   text-shadow: 2px 2px 4px black;
+  z-index: 20;
 }
 
-/* -------- FALLING OBJECTS -------- */
-
+/* falling objects */
 .falling-object {
   position: absolute;
   width: 6%;
-  transform-origin: center center;
-  transform: translateX(-50%) scale(1);
+  transform: translateX(-50%);
   pointer-events: none;
-  z-index: 5;
 }
 
-/* Debris bigger */
+/* debris (bigger) */
 .falling-object.debris {
   width: 20%;
-  z-index: 7;
 }
 
-/* Potholes */
+/* potholes */
 .falling-object.pothole {
   width: 16.5%;
-  z-index: 8;
 }
 
-/* -------- YOU WIN PAGE -------- */
+/* surfboard (bigger final size) */
+.falling-object.surfboard {
+  width: 10%;
+}
 
+/* final score on win page */
 .final-score {
   position: absolute;
   top: 34%;
@@ -142,16 +134,15 @@ body {
   font-size: 3rem;
   font-weight: bold;
   text-shadow: 3px 3px 6px black;
-  z-index: 50;
+  z-index: 20;
 }
 
-/* Play Again button — slightly bigger + slightly higher */
+/* play again button  */
 .play-again-button {
   position: absolute;
-  top: 56%;      /* was 58% → slightly higher now */
-  left: 10%;
-  transform: translateY(-50%);
-  width: 26%;    /* was 24% → tiny bit bigger */
+  top: 46%;
+  left: 7%;
+  width: 26%;
   cursor: pointer;
   z-index: 20;
 }

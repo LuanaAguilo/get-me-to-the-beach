@@ -9,67 +9,62 @@
 
   <body>
     <main>
-      <!-- PAGE 0 — INTRO -->
+      <!-- intro -->
       <div id="page0" class="screen active">
         <img src="images/pg0-start-page.png" class="full" />
       </div>
 
-      <!-- PAGE 1 — START GAME -->
+      <!-- start -->
       <div id="page1" class="screen">
         <img src="images/pg1-start-game.png" class="full" />
         <img id="startBtn" src="images/start-game.png" class="start-button" />
       </div>
 
-      <!-- PAGE 2 — CAR SELECT -->
+      <!-- choose car -->
       <div id="page2" class="screen">
         <img src="images/pg2-select-vehicle.png" class="full" />
 
-        <img src="images/gwagon.png" class="car-option" id="car-gwagon" />
-        <img src="images/porsche.png" class="car-option" id="car-porsche" />
-        <img src="images/red-convertible.png" class="car-option" id="car-red" />
+        <img id="car-gwagon" class="car-option" src="images/gwagon.png" />
+        <img id="car-porsche" class="car-option" src="images/porsche.png" />
+        <img id="car-red" class="car-option" src="images/red-convertible.png" />
       </div>
 
-      <!-- PAGE 3 — GAME PAGE -->
+      <!-- game -->
       <div id="page3" class="screen">
         <div id="gameArea">
           <img src="images/pg3-game-page.png" class="game-bg" />
 
-          <!-- PLAYER CAR -->
           <img id="playerCar" class="player-car" />
 
-          <!-- LIFE BAR -->
           <img id="lifeBar" class="life-bar" src="images/life-bar-full.png" />
 
-          <!-- SCORE -->
           <div id="scoreCounter">Score: 0</div>
         </div>
       </div>
 
-      <!-- PAGE 4 — YOU WIN -->
+      <!-- win -->
       <div id="page4" class="screen">
         <img src="images/pg4-you-win.png" class="full" />
 
         <div id="finalScoreDisplay" class="final-score">Final Score: 0</div>
 
-        <!-- PLAY AGAIN BUTTON -->
         <img
           id="playAgainBtn"
-          src="images/play-again.png"
           class="play-again-button"
+          src="images/play-again.png"
         />
       </div>
 
-      <!-- PAGE 5 — GAME OVER -->
+      <!-- game over -->
       <div id="page5" class="screen">
         <img src="images/pg5-game-over.png" class="full" />
       </div>
 
-      <!-- AUDIO FILES -->
+      <!-- sounds -->
       <audio id="musicChoose" src="sounds/choose-vehicle-page.mp3" loop></audio>
       <audio id="musicGame" src="sounds/game-sound-track.mp3" loop></audio>
       <audio id="carClickSfx" src="sounds/vehicle-clicked-sound.mp3"></audio>
 
-      <!-- NEW SOUND EFFECTS -->
       <audio id="youWinSound" src="sounds/you-won-sound.mp3"></audio>
       <audio id="gameOverSound" src="sounds/game-over-sound.mp3"></audio>
       <audio id="clickSound" src="sounds/click-sound.mp3"></audio>

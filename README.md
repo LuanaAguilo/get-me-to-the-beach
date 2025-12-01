@@ -4,14 +4,14 @@
   <img src="./images/game-logo.png" width="500" alt="Get Me To The Beach Cover">
 </p>
 
-A retro, Hawaii-themed arcade driving game where you cruise down a sunny coastal road, dodge potholes and fallen palm tree debris, and collect pineapples, surfboards, beach balls, and rare sun coins for extra points. The goal: make it to the beach without losing all your lifeline.
+A retro, Hawaii-themed arcade driving game where you cruise down a sunny coastal road, dodge potholes and fallen palm tree debris, and collect pineapples, surfboards, beach balls, and rare sun coins for extra lives. The goal: make it to the beach without losing all your lifeline.
 
 ---
 
 ## How to Play
 
-- Choose your vehicle
 - Press Start
+- Choose your vehicle
 - Use the left and right arrow keys to move
 - Avoid obstacles
 - Collect items for extra points
