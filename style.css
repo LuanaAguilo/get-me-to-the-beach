@@ -7,7 +7,7 @@ body {
   font-family: Arial, sans-serif;
 }
 
-/* each game page */
+/* screens */
 .screen {
   display: none;
   width: 100vw;
@@ -19,7 +19,7 @@ body {
   display: block;
 }
 
-/* full background images */
+/* background images */
 .full,
 .game-bg {
   width: 100%;
@@ -27,12 +27,17 @@ body {
   object-fit: cover;
 }
 
-/* page 2 background should not block car clicking */
+/* hide cursor ONLY in game */
+#page3 {
+  cursor: none;
+}
+
+/* page 2 background */
 #page2 .full {
   pointer-events: none;
 }
 
-/* start button (page 1) */
+/* start button */
 .start-button {
   position: absolute;
   top: 35%;
@@ -43,7 +48,7 @@ body {
   z-index: 10;
 }
 
-/* car select images */
+/* car selection */
 .car-option {
   position: absolute;
   width: 23%;
@@ -74,22 +79,21 @@ body {
   position: absolute;
   bottom: 5%;
   left: 50%;
-  width: 17%;
   transform: translateX(-50%);
+  width: 17%;
   z-index: 10;
 }
 
-/* life bar (top left) */
+/* life bar */
 .life-bar {
   position: absolute;
   width: 30%;
   top: 3%;
   left: 3%;
   z-index: 999;
-  display: block;
 }
 
-/* score (top right) */
+/* score */
 #scoreCounter {
   position: absolute;
   top: 3%;
@@ -109,22 +113,19 @@ body {
   pointer-events: none;
 }
 
-/* debris (bigger) */
 .falling-object.debris {
   width: 20%;
 }
 
-/* potholes */
 .falling-object.pothole {
   width: 16.5%;
 }
 
-/* surfboard (bigger final size) */
 .falling-object.surfboard {
   width: 10%;
 }
 
-/* final score on win page */
+/* final score (win page) */
 .final-score {
   position: absolute;
   top: 34%;
@@ -137,12 +138,53 @@ body {
   z-index: 20;
 }
 
-/* play again button  */
+/* play again button (WIN page) */
 .play-again-button {
   position: absolute;
-  top: 46%;
-  left: 7%;
-  width: 26%;
+  top: 45%;
+  left: 9%;
+  width: 27%;
   cursor: pointer;
   z-index: 20;
+}
+
+/* high score on WIN page */
+#highScoreWin {
+  position: absolute;
+  bottom: 2%;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  font-size: 6.4rem;
+  font-weight: bold;
+  text-shadow: 3px 3px 6px black;
+  z-index: 20;
+}
+
+/* GAME OVER PAGE */
+
+/* High Score */
+.high-score-lose {
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  font-size: 3.6rem;
+  font-weight: bold;
+  text-shadow: 3px 3px 6px black;
+  z-index: 30;
+}
+
+/* Final Score */
+.final-score-lose {
+  position: absolute;
+  top: 72%;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  font-size: 2.3rem;
+  font-weight: bold;
+  text-shadow: 3px 3px 6px black;
+  z-index: 30;
 }
