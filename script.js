@@ -1,5 +1,5 @@
 window.onload = function () {
-  // page elements
+  //--- page elements ---
   let page0 = document.getElementById("page0");
   let page1 = document.getElementById("page1");
   let page2 = document.getElementById("page2");
@@ -40,7 +40,7 @@ window.onload = function () {
   showPage(page0);
   setTimeout(() => showPage(page1), 3500);
 
-  // road geometry
+  //--- road geometry ---
   const TOP_Y = 15;
   const TOP_LEFT = 40;
   const TOP_RIGHT = 85;
@@ -59,7 +59,7 @@ window.onload = function () {
     return lerp(TOP_RIGHT, BOT_RIGHT, (y - TOP_Y) / (BOT_Y - TOP_Y));
   }
 
-  // object types
+  //--- object types ---
   let objectTypes = [
     { type: "pineapple", img: "images/pineapple.png", life: 0, weight: 20 },
     { type: "ball", img: "images/ball.png", life: 0, weight: 15 },
@@ -69,7 +69,7 @@ window.onload = function () {
     { type: "pothole", img: "images/pot-hole.png", life: -2, weight: 23 },
   ];
 
-  // block sun for first 15 seconds
+  //--- block sun for first 15 seconds ---
   let sunAllowed = false;
   setTimeout(() => (sunAllowed = true), 15000);
 
@@ -85,7 +85,7 @@ window.onload = function () {
     return objectTypes[0];
   }
 
-  // player class
+  //--- player class ---
   class PlayerCar {
     constructor(element) {
       this.element = element;
@@ -121,7 +121,7 @@ window.onload = function () {
     }
   }
 
-  // falling objects
+  //--- falling objects ---
   class FallingObject {
     constructor(element, data) {
       this.element = element;
@@ -189,7 +189,7 @@ window.onload = function () {
     }
   }
 
-  // game state
+  //--- game state ---
   let life = 8;
   let player = null;
   let fallingObjects = [];
@@ -202,7 +202,7 @@ window.onload = function () {
   let difficultyBoosted = false;
   let spawnLoop = null;
 
-  // life bar
+  //--- life bar ---
   function updateLifeBar() {
     if (life > 8) life = 8;
     if (life < 0) life = 0;
@@ -224,7 +224,7 @@ window.onload = function () {
     }
   }
 
-  // game over
+  //--- game over ---
   function showGameOver() {
     showPage(page5);
 
@@ -245,7 +245,7 @@ window.onload = function () {
     }, 3500);
   }
 
-  // win screen
+  //--- win screen ---
   function showWinScreen() {
     gameOver = true;
     musicGame.pause();
@@ -267,7 +267,7 @@ window.onload = function () {
     showPage(page4);
   }
 
-  // spawn objects
+  //--- spawn objects ---
   function spawnRandomObject() {
     let data = chooseRandomType();
 
@@ -287,7 +287,7 @@ window.onload = function () {
     fallingObjects.push(obj);
   }
 
-  // sounds
+  //--- sounds ---
   function playCollectSound() {
     let s = winPointsSound.cloneNode(true);
     s.play().catch(() => {});
@@ -298,7 +298,7 @@ window.onload = function () {
     s.play().catch(() => {});
   }
 
-  // main game loop
+  //--- main game loop ---
   setInterval(() => {
     if (!player || gameOver) return;
 
@@ -324,7 +324,7 @@ window.onload = function () {
     });
   }, 30);
 
-  // difficulty boost
+  //--- difficulty boost ---
   setTimeout(() => {
     if (gameOver) return;
 
@@ -338,7 +338,7 @@ window.onload = function () {
     }, 800);
   }, 30000);
 
-  // movement loop
+  //--- movement loop ---
   let lastTime = 0;
 
   function movementLoop(t) {
@@ -356,7 +356,7 @@ window.onload = function () {
 
   requestAnimationFrame(movementLoop);
 
-  // controls
+  //--- controls ---
   window.addEventListener("keydown", (event) => {
     if (!player || gameOver) return;
 
@@ -372,13 +372,13 @@ window.onload = function () {
     }
   });
 
-  // start button
+  //--- start button ---
   startButton.addEventListener("click", () => {
     showPage(page2);
     musicChoose.play().catch(() => {});
   });
 
-  // play again (win)
+  //--- play again (win) ---
   playAgainButton.addEventListener("click", () => {
     clickSound.play().catch(() => {});
     musicGame.pause();
@@ -388,7 +388,7 @@ window.onload = function () {
     musicChoose.play().catch(() => {});
   });
 
-  // select car
+  //--- select car ---
   carOptions.forEach((car) => {
     car.addEventListener("click", () => {
       carClickSfx.play().catch(() => {});
