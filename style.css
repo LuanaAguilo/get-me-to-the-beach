@@ -27,7 +27,7 @@ body {
   object-fit: cover;
 }
 
-/* hide cursor ONLY in game */
+/* hide cursor */
 #page3 {
   cursor: none;
 }
